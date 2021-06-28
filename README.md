@@ -4,23 +4,23 @@
 
 ## Included Features
 
-..* Authentication and Authorization
-..* Data Minpulation 
-..* Client-side Models Validation
-..* well-looked User interface 
+1. Authentication and Authorization
+2. Data Minpulation 
+3. Client-side Models Validation
+4. well-looked User interface 
 
 
 ## Libraries used
 
-..* Linq
-..* Threading
-..* AspNetCore Http
-..* AspNetCore Mvc
-..* AspNetCore Hosting;
-..* ServerWeb
-..* DataAnnotations
-..* Entity Framework Core
-..* Entity Framework Core SqlServer(Scafolding-Migration)
+1. Linq
+2. Threading
+3. AspNetCore Http
+4. AspNetCore Mvc
+5. AspNetCore Hosting;
+6. ServerWeb
+7. DataAnnotations
+8. Entity Framework Core
+9. Entity Framework Core SqlServer(Scafolding-Migration)
 
 
 

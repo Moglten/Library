@@ -1,0 +1,54 @@
+﻿@model Library.ViewModels.BookAuthorViewModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+<div class="container">
+    <h4>Book</h4>
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Create" enctype="multipart/form-data">
+                @if (ViewBag.Message != null)
+                {
+                    <h5 class="alert alert-danger">@ViewBag.Message</h5>
+                }
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="Title" class="control-label"></label>
+                    <input asp-for="Title" class="form-control" />
+                    <span asp-validation-for="Title" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Discription" class="control-label"></label>
+                    <input asp-for="Discription" class="form-control" />
+                    <span asp-validation-for="Discription" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="File" class="control-label">Image</label>
+                    <input type="file" name="File" asp-for="File" class="form-control" />
+                    <span asp-validation-for="File" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="AuthorId" class="control-label">The Author</label>
+                    <select asp-for="AuthorId" class="form-control"
+                            asp-items="@(new SelectList(Model.Authors, "Id", "Name"))"></select>
+                    <span asp-validation-for="AuthorId" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-info" /> |
+                    <a type="submit" asp-action="Index" class="btn btn-outline-info">Back to List</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+
+    <partial name="_ValidationScriptsPartial" />
+
+
+}
